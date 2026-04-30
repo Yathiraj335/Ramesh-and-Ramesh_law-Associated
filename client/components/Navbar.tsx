@@ -40,7 +40,7 @@ export default function Navbar() {
               </div>
 
               <div className="text-xs md:text-sm text-accent font-semibold tracking-wide uppercase">
-                  /t Law Associates
+                    Law Associates
               </div>
             </div>
           </Link>
