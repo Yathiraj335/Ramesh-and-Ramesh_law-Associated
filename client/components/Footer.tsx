@@ -176,7 +176,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="https://www.google.com/maps/place/Ramesh+%26+Ramesh+Law+Associates/@13.0059731,77.5414572,17z"
+                href="https://google.com/maps?q=Ramesh+%26+Ramesh+Law+Associates,+119,+2nd+Stage,+6th+Main+Rd,+near+Geleyarabalaga+Circle,+2nd+Phase,+Mahalakshmipuram+Layout,+Bengaluru,+Karnataka+560086&ftid=0x3bae3d9f1bf12f29:0x695bb6f031d0caec&entry=gps"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-start gap-3 pt-2 hover:text-accent transition"
