@@ -203,7 +203,7 @@ export default function Index() {
             </div>
 
             <div>
-              <div className="text-5xl font-bold text-accent">9</div>
+              <div className="text-5xl font-bold text-accent">10</div>
               <div className="font-semibold text-primary mt-2">
                 Practice Areas
               </div>
