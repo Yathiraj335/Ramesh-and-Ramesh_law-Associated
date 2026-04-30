@@ -1,8 +1,6 @@
 import { Phone, Mail, MapPin, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const LOGO_URL = "/logo-light.png";
-
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -15,24 +13,20 @@ export default function Footer() {
 
           {/* Brand Section */}
           <div>
-            <Link to="/" className="flex items-center gap-3 mb-5">
-              <div className="w-14 h-14">
-                <img
-                  src={LOGO_URL}
-                  alt="Ramesh & Ramesh Law Associates"
-                  className="w-full h-full object-contain"
-                />
+            <Link to="/" className="block mb-5">
+
+              <div className="text-5xl mb-4">
+                ⚖️
               </div>
 
-              <div>
-                <div className="font-serif text-xl font-bold leading-tight">
-                  Ramesh & Ramesh
-                </div>
-
-                <div className="text-sm text-accent font-semibold uppercase tracking-wide">
-                  Law Associates
-                </div>
+              <div className="font-serif text-3xl font-bold leading-tight text-white">
+                Ramesh & Ramesh
               </div>
+
+              <div className="text-sm text-accent font-semibold uppercase tracking-[0.35em] mt-2">
+                Law Associates
+              </div>
+
             </Link>
 
             <p className="text-sm italic text-primary-foreground/90 mb-4">
@@ -42,7 +36,8 @@ export default function Footer() {
             <p className="text-sm text-primary-foreground/75 leading-relaxed">
               Serving clients across Karnataka with over 21 years of trusted
               legal excellence in civil, criminal, property, family, cyber law,
-              legal documentation, legal opinion, and registration services.
+              legal documentation, legal opinion, divorce cases, and registration
+              services.
             </p>
           </div>
 
@@ -128,6 +123,7 @@ export default function Footer() {
               <li>Criminal Cases</li>
               <li>Property Cases</li>
               <li>Family Law</li>
+              <li>Divorce Cases</li>
               <li>Cyber Law</li>
               <li>Documentation</li>
               <li>Legal Opinion</li>
@@ -187,6 +183,7 @@ export default function Footer() {
                 <MapPin size={16} className="mt-1 flex-shrink-0" />
 
                 <div className="text-sm text-primary-foreground/85 leading-relaxed">
+
                   <div>
                     No. 119, 2nd Stage, 6th Main Rd,
                   </div>
@@ -206,11 +203,13 @@ export default function Footer() {
                   <div className="mt-1 font-medium text-accent">
                     Serving Clients Across Karnataka
                   </div>
+
                 </div>
               </a>
 
             </div>
           </div>
+
         </div>
 
         {/* Bottom Footer */}
@@ -248,6 +247,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
+
       </div>
     </footer>
   );
