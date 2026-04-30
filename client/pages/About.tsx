@@ -1,109 +1,193 @@
+import {
+  Scale,
+  ShieldCheck,
+  Briefcase,
+  Users,
+  Landmark,
+} from "lucide-react";
 import Navbar from "@/components/Navbar";
 import TopContactBar from "@/components/TopContactBar";
 import Footer from "@/components/Footer";
+import StickyMobileCTA from "@/components/StickyMobileCTA";
 
 export default function About() {
   return (
-    <div className="w-full">
+    <div className="w-full pb-24 md:pb-0">
       <TopContactBar />
       <Navbar />
 
       {/* Hero Section */}
       <section className="bg-primary text-primary-foreground py-20">
         <div className="container max-w-6xl mx-auto px-4 text-center">
-          <h1 className="font-serif text-4xl md:text-5xl font-bold">
-            About Ramesh and Ramesh Law Associates
+          <h1 className="font-serif text-4xl md:text-5xl font-bold leading-tight">
+            About Ramesh & Ramesh Law Associates
           </h1>
-          <p className="text-lg text-primary-foreground/80 mt-4 max-w-3xl mx-auto">
-            Delivering trusted legal guidance with over 21 years of experience in
-            civil, criminal, property, family, and cyber law.
+
+          <p className="text-lg text-primary-foreground/80 mt-4 max-w-3xl mx-auto leading-relaxed">
+            Delivering trusted legal guidance with over 21 years of experience
+            serving individuals, families, and businesses across Karnataka.
           </p>
         </div>
       </section>
 
       {/* Firm Introduction */}
       <section className="py-16 md:py-24 bg-background">
-        <div className="container max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+        <div className="container max-w-6xl mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center">
+
+          {/* Left Content */}
           <div>
-            <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6">
-              Trusted Legal Excellence
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary mb-6">
+              Trusted Legal Excellence Across Karnataka
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-              Ramesh and Ramesh Law Associates has been providing comprehensive
-              legal solutions for individuals, families, and businesses in
-              Bangalore for over two decades.
+
+            <p className="text-muted-foreground text-lg leading-relaxed mb-5">
+              Ramesh and Ramesh Law Associates is a full-service legal practice
+              committed to delivering dependable legal solutions built on
+              experience, integrity, and practical advocacy.
             </p>
+
+            <p className="text-muted-foreground text-lg leading-relaxed mb-5">
+              For over two decades, we have served clients across Karnataka in
+              civil disputes, criminal proceedings, property matters, family
+              law, cyber law, legal documentation, legal opinion, family
+              consultation, and document registration.
+            </p>
+
             <p className="text-muted-foreground text-lg leading-relaxed">
-              With expertise across civil, criminal, property, family, cyber law,
-              legal documentation, legal opinion, family consultation, and
-              document registration, our firm is committed to justice, integrity,
-              and professional excellence.
+              Our mission is to provide reliable legal guidance while protecting
+              rights, resolving disputes, and ensuring clients receive
+              transparent and ethical representation.
             </p>
           </div>
 
-          <div className="bg-muted rounded-lg p-8 shadow-sm">
-            <h3 className="font-serif text-2xl font-bold mb-4">
-              21+ Years of Experience
+          {/* Right Stats Card */}
+          <div className="bg-muted rounded-xl p-8 shadow-sm">
+            <h3 className="font-serif text-2xl font-bold text-primary mb-6">
+              Our Legal Strength
             </h3>
-            <ul className="space-y-3 text-muted-foreground">
-              <li>• Civil Cases</li>
-              <li>• Criminal Cases</li>
-              <li>• Property Law</li>
-              <li>• Family Law</li>
-              <li>• Cyber Law</li>
-              <li>• Documentation & Registration</li>
-            </ul>
+
+            <div className="space-y-4 text-muted-foreground">
+              <div className="flex items-center gap-3">
+                <Scale className="text-accent" size={20} />
+                <span>21+ Years of Legal Experience</span>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <Landmark className="text-accent" size={20} />
+                <span>Serving Clients Across Karnataka</span>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <Briefcase className="text-accent" size={20} />
+                <span>9 Core Practice Areas</span>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <Users className="text-accent" size={20} />
+                <span>Individuals, Families & Businesses</span>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <ShieldCheck className="text-accent" size={20} />
+                <span>Justice-Driven, Ethical Representation</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Mission & Values */}
+      {/* Core Values */}
       <section className="py-16 md:py-24 bg-muted/30">
         <div className="container max-w-6xl mx-auto px-4 text-center">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-10">
+          <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary mb-12">
             Justice. Integrity. Expertise.
           </h2>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-background p-8 rounded-lg shadow-sm">
-              <h3 className="font-bold text-xl mb-3">Justice</h3>
-              <p className="text-muted-foreground">
-                Committed to protecting legal rights through dependable advocacy.
+
+            {/* Justice */}
+            <div className="bg-background p-8 rounded-xl shadow-sm border border-border">
+              <h3 className="font-bold text-xl text-primary mb-4">
+                Justice
+              </h3>
+
+              <p className="text-muted-foreground leading-relaxed">
+                We are committed to protecting legal rights and pursuing fair,
+                dependable outcomes for every client.
               </p>
             </div>
 
-            <div className="bg-background p-8 rounded-lg shadow-sm">
-              <h3 className="font-bold text-xl mb-3">Integrity</h3>
-              <p className="text-muted-foreground">
-                Ethical legal representation built on trust and transparency.
+            {/* Integrity */}
+            <div className="bg-background p-8 rounded-xl shadow-sm border border-border">
+              <h3 className="font-bold text-xl text-primary mb-4">
+                Integrity
+              </h3>
+
+              <p className="text-muted-foreground leading-relaxed">
+                Ethical legal representation, transparency, and trust remain at
+                the heart of our practice.
               </p>
             </div>
 
-            <div className="bg-background p-8 rounded-lg shadow-sm">
-              <h3 className="font-bold text-xl mb-3">Expertise</h3>
-              <p className="text-muted-foreground">
-                Over two decades of practical legal knowledge across diverse
-                practice areas.
+            {/* Expertise */}
+            <div className="bg-background p-8 rounded-xl shadow-sm border border-border">
+              <h3 className="font-bold text-xl text-primary mb-4">
+                Expertise
+              </h3>
+
+              <p className="text-muted-foreground leading-relaxed">
+                With over 21 years of practical legal experience, we offer
+                informed strategy across diverse legal domains.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA */}
+      {/* Practice Focus */}
+      <section className="py-16 md:py-24">
+        <div className="container max-w-6xl mx-auto px-4">
+          <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary text-center mb-12">
+            Our Practice Focus
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            {[
+              "Civil Cases",
+              "Criminal Cases",
+              "Property Law",
+              "Family Law",
+              "Cyber Law",
+              "Documentation & Registration",
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="bg-white border border-border rounded-lg p-6 shadow-sm text-center"
+              >
+                <h3 className="font-bold text-primary text-lg">{item}</h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
       <section className="py-16 bg-primary text-primary-foreground">
         <div className="container max-w-4xl mx-auto px-4 text-center">
           <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">
             Need Trusted Legal Guidance?
           </h2>
-          <p className="text-primary-foreground/80 text-lg mb-8">
-            Contact Ramesh and Ramesh Law Associates for reliable legal
-            consultation and support.
+
+          <p className="text-primary-foreground/80 text-lg mb-8 max-w-2xl mx-auto">
+            Contact Ramesh and Ramesh Law Associates for dependable legal
+            consultation, representation, and documentation services across
+            Karnataka.
           </p>
 
           <a
             href="/contact"
-            className="inline-block bg-accent text-accent-foreground px-8 py-3 rounded font-bold hover:opacity-90 transition"
+            className="inline-block bg-accent text-accent-foreground px-8 py-4 rounded-md font-bold hover:opacity-90 transition"
           >
             Contact Us Today
           </a>
@@ -111,6 +195,7 @@ export default function About() {
       </section>
 
       <Footer />
+      <StickyMobileCTA />
     </div>
   );
 }
