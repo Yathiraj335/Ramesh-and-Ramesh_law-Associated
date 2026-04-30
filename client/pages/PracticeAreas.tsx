@@ -49,6 +49,11 @@ const practiceAreas = [
     description:
       "End-to-end support for legal registration processes and documentation compliance.",
   },
+  {
+  title: "Divorce Cases",
+  description:
+    "Professional legal guidance for divorce proceedings, mutual consent divorce, contested divorce, child custody, alimony, domestic disputes, and matrimonial legal resolution.",
+  },
 ];
 
 export default function PracticeAreas() {
