@@ -121,6 +121,7 @@ export default function Footer() {
             <ul className="space-y-3 text-sm text-primary-foreground/85">
               <li>Civil Cases</li>
               <li>Criminal Cases</li>
+              <li>Divorce Cases</li>
               <li>Property Cases</li>
               <li>Family Law</li>
               <li>Divorce Cases</li>
