@@ -24,43 +24,43 @@ const queryClient = new QueryClient();
 
 export default function App() {
   return (
-      <QueryClientProvider client={queryClient}>
-        <TooltipProvider>
-          <Toaster />
-          <Sonner />
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
 
-          <BrowserRouter>
-            <Routes>
+        <BrowserRouter>
+          <Routes>
 
-              {/* Main Pages */}
-              <Route path="/" element={<Index />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
+            {/* Main Pages */}
+            <Route path="/" element={<Index />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
 
-              {/* Conversion */}
-              <Route path="/consultation" element={<Consultation />} />
-              <Route path="/thank-you" element={<ThankYou />} />
+            {/* Conversion */}
+            <Route path="/consultation" element={<Consultation />} />
+            <Route path="/thank-you" element={<ThankYou />} />
 
-              {/* Practice & Services */}
-              <Route path="/practice-areas" element={<PracticeAreas />} />
-              <Route path="/legal-services" element={<LegalServices />} />
+            {/* Practice & Services */}
+            <Route path="/practice-areas" element={<PracticeAreas />} />
+            <Route path="/legal-services" element={<LegalServices />} />
 
-              {/* Trust */}
-              <Route path="/faq" element={<FAQ />} />
-              <Route path="/office-location" element={<OfficeLocation />} />
+            {/* Trust */}
+            <Route path="/faq" element={<FAQ />} />
+            <Route path="/office-location" element={<OfficeLocation />} />
 
-              {/* Legal Compliance */}
-              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-              <Route path="/terms-of-service" element={<TermsOfService />} />
-              <Route path="/disclaimer" element={<Disclaimer />} />
+            {/* Legal Compliance */}
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-of-service" element={<TermsOfService />} />
+            <Route path="/disclaimer" element={<Disclaimer />} />
 
-              {/* Catch-All */}
-              <Route path="*" element={<NotFound />} />
+            {/* Catch-All */}
+            <Route path="*" element={<NotFound />} />
 
-            </Routes>
-          </BrowserRouter>
+          </Routes>
+        </BrowserRouter>
 
-        </TooltipProvider>
-      </QueryClientProvider>
+      </TooltipProvider>
+    </QueryClientProvider>
   );
 }
