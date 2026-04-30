@@ -29,6 +29,7 @@ export default function Footer() {
                 <div className="font-serif text-xl font-bold leading-tight">
                   Ramesh & Ramesh
                 </div>
+
                 <div className="text-sm text-accent font-semibold uppercase tracking-wide">
                   Law Associates
                 </div>
@@ -42,15 +43,18 @@ export default function Footer() {
             <p className="text-sm text-primary-foreground/75 leading-relaxed">
               Serving clients across Karnataka with over 21 years of trusted
               legal excellence in civil, criminal, property, family, cyber law,
-              legal documentation, and registration services.
+              legal documentation, legal opinion, and registration services.
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-serif text-xl font-bold mb-5">Quick Links</h4>
+            <h4 className="font-serif text-xl font-bold mb-5">
+              Quick Links
+            </h4>
 
             <ul className="space-y-3 text-sm">
+
               <li>
                 <Link to="/" className="hover:text-accent transition">
                   Home
@@ -64,15 +68,36 @@ export default function Footer() {
               </li>
 
               <li>
-                <a href="/#practice-areas" className="hover:text-accent transition">
+                <Link
+                  to="/practice-areas"
+                  className="hover:text-accent transition"
+                >
                   Practice Areas
-                </a>
+                </Link>
               </li>
 
               <li>
-                <a href="/#faq" className="hover:text-accent transition">
+                <Link
+                  to="/legal-services"
+                  className="hover:text-accent transition"
+                >
+                  Legal Services
+                </Link>
+              </li>
+
+              <li>
+                <Link to="/faq" className="hover:text-accent transition">
                   FAQ
-                </a>
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  to="/office-location"
+                  className="hover:text-accent transition"
+                >
+                  Office Location
+                </Link>
               </li>
 
               <li>
@@ -80,13 +105,23 @@ export default function Footer() {
                   Contact Us
                 </Link>
               </li>
+
+              <li>
+                <Link
+                  to="/consultation"
+                  className="hover:text-accent transition font-semibold text-accent"
+                >
+                  Book Consultation
+                </Link>
+              </li>
+
             </ul>
           </div>
 
-          {/* Practice Areas */}
+          {/* Legal Services */}
           <div>
             <h4 className="font-serif text-xl font-bold mb-5">
-              Practice Areas
+              Legal Services
             </h4>
 
             <ul className="space-y-3 text-sm text-primary-foreground/85">
@@ -97,13 +132,16 @@ export default function Footer() {
               <li>Cyber Law</li>
               <li>Documentation</li>
               <li>Legal Opinion</li>
+              <li>Family Consultation</li>
               <li>Document Registration</li>
             </ul>
           </div>
 
           {/* Contact Section */}
           <div>
-            <h4 className="font-serif text-xl font-bold mb-5">Get In Touch</h4>
+            <h4 className="font-serif text-xl font-bold mb-5">
+              Get In Touch
+            </h4>
 
             <div className="space-y-4 text-sm">
 
@@ -141,24 +179,37 @@ export default function Footer() {
                 <span>WhatsApp Consultation</span>
               </a>
 
-              <div className="flex items-start gap-3 pt-2">
+              <a
+                href="https://www.google.com/maps/place/Ramesh+%26+Ramesh+Law+Associates/@13.0059731,77.5414572,17z"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-start gap-3 pt-2 hover:text-accent transition"
+              >
                 <MapPin size={16} className="mt-1 flex-shrink-0" />
 
                 <div className="text-sm text-primary-foreground/85 leading-relaxed">
                   <div>
-                    No. 119, 2nd Stage, 2nd Phase, 6th Main,
+                    No. 119, 2nd Stage, 6th Main Rd,
                   </div>
+
                   <div>
                     Near Geleyarabalaga Circle,
                   </div>
+
                   <div>
-                    Mahalakshmi Puram, Bangalore - 560086
+                    2nd Phase, Mahalakshmipuram Layout,
                   </div>
+
+                  <div>
+                    Bengaluru, Karnataka - 560086
+                  </div>
+
                   <div className="mt-1 font-medium text-accent">
                     Serving Clients Across Karnataka
                   </div>
                 </div>
-              </div>
+              </a>
+
             </div>
           </div>
         </div>
@@ -168,21 +219,33 @@ export default function Footer() {
           <div className="flex flex-col lg:flex-row justify-between items-center gap-4 text-sm text-primary-foreground/70">
 
             <p className="text-center lg:text-left">
-              © {currentYear} Ramesh and Ramesh Law Associates. All rights reserved.
+              © {currentYear} Ramesh & Ramesh Law Associates. All rights
+              reserved.
             </p>
 
             <div className="flex flex-wrap justify-center gap-5">
-              <a href="/privacy-policy" className="hover:text-accent transition">
+
+              <Link
+                to="/privacy-policy"
+                className="hover:text-accent transition"
+              >
                 Privacy Policy
-              </a>
+              </Link>
 
-              <a href="/terms-of-service" className="hover:text-accent transition">
+              <Link
+                to="/terms-of-service"
+                className="hover:text-accent transition"
+              >
                 Terms of Service
-              </a>
+              </Link>
 
-              <a href="/disclaimer" className="hover:text-accent transition">
+              <Link
+                to="/disclaimer"
+                className="hover:text-accent transition"
+              >
                 Disclaimer
-              </a>
+              </Link>
+
             </div>
           </div>
         </div>
