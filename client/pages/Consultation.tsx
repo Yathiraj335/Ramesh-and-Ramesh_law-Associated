@@ -39,12 +39,25 @@ export default function Consultation() {
             >
               {/* Hidden Fields */}
               <input type="hidden" name="_captcha" value="false" />
+
               <input
                 type="hidden"
                 name="_subject"
                 value="New Legal Consultation Request - Ramesh & Ramesh Law Associates"
               />
-              <input type="text" name="_honey" style={{ display: "none" }} />
+
+              <input
+                type="hidden"
+                name="_next"
+                value="http://localhost:8080/thank-you"
+              />
+
+              {/* Honeypot Anti-Spam */}
+              <input
+                type="text"
+                name="_honey"
+                style={{ display: "none" }}
+              />
 
               {/* Full Name */}
               <div>
@@ -115,7 +128,7 @@ export default function Consultation() {
                 </select>
               </div>
 
-              {/* Message */}
+              {/* Legal Concern */}
               <div>
                 <label className="block text-sm font-medium mb-2">
                   Describe Your Legal Concern
@@ -139,6 +152,7 @@ export default function Consultation() {
               </button>
             </form>
 
+            {/* Disclaimer */}
             <p className="text-sm text-muted-foreground mt-6 text-center leading-relaxed">
               By submitting this form, you acknowledge that website submissions
               do not automatically establish an advocate-client relationship.
@@ -152,6 +166,7 @@ export default function Consultation() {
       {/* Alternative Contact */}
       <section className="py-16 bg-muted/30">
         <div className="container max-w-4xl mx-auto px-4 text-center">
+
           <h2 className="font-serif text-3xl font-bold text-primary mb-4">
             Prefer Direct Contact?
           </h2>
@@ -161,6 +176,7 @@ export default function Consultation() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
             <a
               href="tel:+919902877471"
               className="bg-primary text-primary-foreground px-8 py-4 rounded-md font-bold hover:opacity-90 transition"
@@ -176,6 +192,7 @@ export default function Consultation() {
             >
               WhatsApp Consultation
             </a>
+
           </div>
         </div>
       </section>
