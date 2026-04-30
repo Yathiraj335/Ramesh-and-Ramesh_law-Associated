@@ -15,9 +15,10 @@ export default function Navbar() {
   const navLinks = [
     { label: t("nav.home"), href: "/" },
     { label: t("nav.about"), href: "/about" },
-    { label: t("nav.practice-areas"), href: "/#practice-areas" },
-    { label: t("nav.services"), href: "/#services" },
-    { label: t("nav.faq"), href: "/#faq" },
+    { label: "Practice Areas", href: "/practice-areas" },
+    { label: "Legal Services", href: "/legal-services" },
+    { label: "FAQ", href: "/faq" },
+    { label: "Office", href: "/office-location" },
     { label: t("nav.contact"), href: "/contact" },
   ];
 
@@ -40,6 +41,7 @@ export default function Navbar() {
               <div className="font-serif text-lg md:text-2xl font-bold text-primary">
                 Ramesh & Ramesh
               </div>
+
               <div className="text-xs md:text-sm text-accent font-semibold tracking-wide uppercase">
                 Law Associates
               </div>
@@ -47,35 +49,25 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-8">
-            {navLinks.map((link) =>
-              link.href.startsWith("/") && !link.href.includes("#") ? (
-                <Link
-                  key={link.href}
-                  to={link.href}
-                  className={cn(
-                    "text-sm font-semibold transition",
-                    location.pathname === link.href
-                      ? "text-accent"
-                      : "text-foreground hover:text-accent"
-                  )}
-                >
-                  {link.label}
-                </Link>
-              ) : (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  className="text-sm font-semibold text-foreground hover:text-accent transition"
-                >
-                  {link.label}
-                </a>
-              )
-            )}
+          <div className="hidden xl:flex items-center gap-6">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                to={link.href}
+                className={cn(
+                  "text-sm font-semibold transition whitespace-nowrap",
+                  location.pathname === link.href
+                    ? "text-accent"
+                    : "text-foreground hover:text-accent"
+                )}
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
 
           {/* Desktop Right Section */}
-          <div className="hidden lg:flex items-center gap-5">
+          <div className="hidden xl:flex items-center gap-5">
 
             {/* Language Toggle */}
             <div className="flex items-center gap-2 text-sm border-l border-border pl-4">
@@ -107,16 +99,16 @@ export default function Navbar() {
             </div>
 
             {/* CTA Button */}
-            <a
-              href="/#consultation"
-              className="bg-accent text-accent-foreground px-6 py-3 rounded font-semibold hover:opacity-90 transition shadow-sm"
+            <Link
+              to="/consultation"
+              className="bg-accent text-accent-foreground px-6 py-3 rounded font-semibold hover:opacity-90 transition shadow-sm whitespace-nowrap"
             >
               {t("nav.book-consultation")}
-            </a>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="lg:hidden flex items-center">
+          <div className="xl:hidden flex items-center">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-2 hover:bg-muted rounded transition"
@@ -129,30 +121,24 @@ export default function Navbar() {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="lg:hidden border-t border-border pb-4 bg-white">
+          <div className="xl:hidden border-t border-border pb-4 bg-white">
             <div className="flex flex-col gap-2 pt-3">
 
-              {navLinks.map((link) =>
-                link.href.startsWith("/") && !link.href.includes("#") ? (
-                  <Link
-                    key={link.href}
-                    to={link.href}
-                    className="px-4 py-3 text-sm font-semibold text-foreground hover:bg-muted rounded transition"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {link.label}
-                  </Link>
-                ) : (
-                  <a
-                    key={link.href}
-                    href={link.href}
-                    className="px-4 py-3 text-sm font-semibold text-foreground hover:bg-muted rounded transition"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {link.label}
-                  </a>
-                )
-              )}
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  to={link.href}
+                  className={cn(
+                    "px-4 py-3 text-sm font-semibold rounded transition",
+                    location.pathname === link.href
+                      ? "text-accent bg-muted"
+                      : "text-foreground hover:bg-muted"
+                  )}
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              ))}
 
               {/* Mobile Language Toggle */}
               <div className="flex items-center gap-3 px-4 py-3 border-t border-border mt-2">
@@ -184,13 +170,14 @@ export default function Navbar() {
               </div>
 
               {/* Mobile CTA */}
-              <a
-                href="/#consultation"
+              <Link
+                to="/consultation"
                 className="mx-4 bg-accent text-accent-foreground px-4 py-3 rounded font-semibold text-center hover:opacity-90 transition"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {t("nav.book-consultation")}
-              </a>
+              </Link>
+
             </div>
           </div>
         )}
