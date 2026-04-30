@@ -125,6 +125,7 @@ export default function Consultation() {
                   <option>Legal Opinion</option>
                   <option>Family Consultation</option>
                   <option>Document Registration</option>
+                  <option>Divorce Cases</option>
                 </select>
               </div>
 
