@@ -1,8 +1,7 @@
 import { Phone, Mail, MapPin, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const LOGO_URL =
-  "https://cdn.builder.io/api/v1/image/assets%2F57134794e3d74be2b861b196562dad82%2Fddbc1a054e4d4d8599b546f14139e94c?format=webp&width=800&height=1200";
+const LOGO_URL = "/logo-dark.png";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
