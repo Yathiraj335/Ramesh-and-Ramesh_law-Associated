@@ -7,7 +7,7 @@ import StickyMobileCTA from "@/components/StickyMobileCTA";
 import { cn } from "@/lib/utils";
 
 const HERO_BG =
-  "/lady-justice.jpg"; // Save your uploaded image inside public folder as lady-justice.jpg
+  "/lady-justice.jpg"; // Save image inside public folder
 
 const practiceAreas = [
   {
@@ -70,12 +70,12 @@ const faqItems = [
   {
     question: "How do I schedule a consultation?",
     answer:
-      "You can schedule a consultation by contacting us directly through phone, WhatsApp, or our contact form.",
+      "You can schedule a consultation by contacting us directly through phone, WhatsApp, or our consultation request form.",
   },
   {
     question: "Do you serve clients outside Bangalore?",
     answer:
-      "Yes, Ramesh and Ramesh Law Associates serves clients across Karnataka.",
+      "Yes, Ramesh & Ramesh Law Associates serves clients across Karnataka.",
   },
   {
     question: "Do you provide legal documentation and registration support?",
@@ -145,7 +145,7 @@ export default function Index() {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href="#consultation"
+                href="/consultation"
                 className="bg-accent text-accent-foreground px-8 py-4 rounded font-bold hover:opacity-90 transition text-center"
               >
                 Book Consultation
@@ -168,6 +168,7 @@ export default function Index() {
       <section className="bg-muted py-14">
         <div className="container max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+
             <div>
               <div className="text-5xl font-bold text-accent">21+</div>
               <div className="font-semibold text-primary mt-2">
@@ -176,7 +177,9 @@ export default function Index() {
             </div>
 
             <div>
-              <div className="text-5xl font-bold text-accent">Karnataka</div>
+              <div className="text-5xl font-bold text-accent">
+                Karnataka
+              </div>
               <div className="font-semibold text-primary mt-2">
                 Statewide Legal Service
               </div>
@@ -188,19 +191,21 @@ export default function Index() {
                 Practice Areas
               </div>
             </div>
+
           </div>
         </div>
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-16 md:py-24">
-        <div className="container max-w-6xl mx-auto px-4 text-center max-w-4xl">
+      <section className="py-16 md:py-24">
+        <div className="container max-w-4xl mx-auto px-4 text-center">
+
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary mb-8">
             About Ramesh & Ramesh Law Associates
           </h2>
 
           <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-            Ramesh and Ramesh Law Associates is a trusted full-service legal
+            Ramesh & Ramesh Law Associates is a trusted full-service legal
             practice with over 21 years of experience serving clients across
             Karnataka.
           </p>
@@ -210,12 +215,23 @@ export default function Index() {
             provide strategic legal representation, consultation, documentation,
             and registration services for individuals, families, and businesses.
           </p>
+
+          <div className="mt-8">
+            <a
+              href="/about"
+              className="inline-block bg-primary text-primary-foreground px-8 py-4 rounded font-bold hover:opacity-90 transition"
+            >
+              Learn More About Us
+            </a>
+          </div>
+
         </div>
       </section>
 
       {/* Practice Areas */}
-      <section id="practice-areas" className="bg-muted py-16 md:py-24">
+      <section className="bg-muted py-16 md:py-24">
         <div className="container max-w-6xl mx-auto px-4">
+
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary text-center mb-16">
             Our Practice Areas
           </h2>
@@ -227,19 +243,34 @@ export default function Index() {
                 className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition"
               >
                 <div className="text-4xl mb-4">{area.icon}</div>
+
                 <h3 className="font-serif text-xl font-bold text-primary mb-3">
                   {area.title}
                 </h3>
-                <p className="text-muted-foreground">{area.description}</p>
+
+                <p className="text-muted-foreground">
+                  {area.description}
+                </p>
               </div>
             ))}
           </div>
+
+          <div className="text-center mt-12">
+            <a
+              href="/practice-areas"
+              className="inline-block bg-primary text-primary-foreground px-8 py-4 rounded font-bold hover:opacity-90 transition"
+            >
+              Explore All Practice Areas
+            </a>
+          </div>
+
         </div>
       </section>
 
       {/* Why Choose Us */}
       <section className="py-16 md:py-24">
         <div className="container max-w-6xl mx-auto px-4">
+
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary text-center mb-16">
             Why Choose Us
           </h2>
@@ -247,6 +278,7 @@ export default function Index() {
           <div className="grid md:grid-cols-2 gap-8">
             {whyChooseUs.map((item, idx) => (
               <div key={idx} className="flex gap-4">
+
                 <div className="h-10 w-10 rounded-full bg-accent flex items-center justify-center text-white font-bold">
                   ✓
                 </div>
@@ -255,17 +287,23 @@ export default function Index() {
                   <h3 className="font-serif text-xl font-bold text-primary mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-muted-foreground">{item.description}</p>
+
+                  <p className="text-muted-foreground">
+                    {item.description}
+                  </p>
                 </div>
+
               </div>
             ))}
           </div>
+
         </div>
       </section>
 
       {/* FAQ */}
       <section className="bg-muted py-16 md:py-24">
         <div className="container max-w-4xl mx-auto px-4">
+
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary text-center mb-12">
             Frequently Asked Questions
           </h2>
@@ -273,13 +311,16 @@ export default function Index() {
           <div className="space-y-4">
             {faqItems.map((item, idx) => (
               <div key={idx} className="bg-white rounded-lg border">
+
                 <button
                   onClick={() =>
                     setExpandedFAQ(expandedFAQ === idx ? null : idx)
                   }
                   className="w-full px-6 py-4 flex justify-between items-center"
                 >
-                  <span className="font-bold text-left">{item.question}</span>
+                  <span className="font-bold text-left">
+                    {item.question}
+                  </span>
 
                   <ChevronDown
                     className={cn(
@@ -294,31 +335,48 @@ export default function Index() {
                     {item.answer}
                   </div>
                 )}
+
               </div>
             ))}
           </div>
+
+          <div className="text-center mt-10">
+            <a
+              href="/faq"
+              className="inline-block bg-accent text-accent-foreground px-8 py-4 rounded font-bold hover:opacity-90 transition"
+            >
+              View All FAQs
+            </a>
+          </div>
+
         </div>
       </section>
 
-      {/* CTA */}
-      <section
-        id="consultation"
-        className="bg-primary text-white py-16 md:py-24 text-center"
-      >
+      {/* Final CTA */}
+      <section className="bg-primary text-white py-16 md:py-24 text-center">
         <div className="container max-w-4xl mx-auto px-4">
+
           <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6">
             Need Trusted Legal Guidance?
           </h2>
 
           <p className="text-lg text-white/90 mb-8">
-            Contact Ramesh & Ramesh Law Associates for expert legal consultation
-            across Karnataka.
+            Contact Ramesh & Ramesh Law Associates for expert legal
+            consultation across Karnataka.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
+            <a
+              href="/consultation"
+              className="bg-white text-primary px-8 py-4 rounded font-bold hover:opacity-90 transition"
+            >
+              Book Consultation
+            </a>
+
             <a
               href="tel:+919902877471"
-              className="bg-accent text-accent-foreground px-8 py-4 rounded font-bold"
+              className="bg-accent text-accent-foreground px-8 py-4 rounded font-bold hover:opacity-90 transition"
             >
               Call Now
             </a>
@@ -327,11 +385,13 @@ export default function Index() {
               href="https://wa.me/919902877471"
               target="_blank"
               rel="noopener noreferrer"
-              className="border-2 border-white px-8 py-4 rounded font-bold"
+              className="border-2 border-white px-8 py-4 rounded font-bold hover:bg-white/10 transition"
             >
               WhatsApp Consultation
             </a>
+
           </div>
+
         </div>
       </section>
 
