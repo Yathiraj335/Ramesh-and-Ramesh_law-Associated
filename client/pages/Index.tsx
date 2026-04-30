@@ -63,6 +63,12 @@ const practiceAreas = [
     description:
       "End-to-end support for legal registration and compliance services.",
   },
+  {
+  icon: "💔",
+  title: "Divorce Cases",
+  description:
+    "Professional legal support for divorce proceedings, child custody, alimony, mutual consent, contested divorce, and matrimonial dispute resolution.",
+  },
 ];
 
 const faqItems = [
