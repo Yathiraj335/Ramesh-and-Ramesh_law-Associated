@@ -49,7 +49,7 @@ export default function Consultation() {
               <input
                 type="hidden"
                 name="_next"
-                value="http://localhost:8080/thank-you"
+                value="https://rameshlawassociates.netlify.app/thank-you"
               />
 
               {/* Honeypot Anti-Spam */}
