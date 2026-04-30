@@ -19,6 +19,16 @@ export default function About() {
       {/* Hero Section */}
       <section className="bg-primary text-primary-foreground py-20">
         <div className="container max-w-6xl mx-auto px-4 text-center">
+
+          {/* Full Brand Logo */}
+          <div className="flex justify-center mb-10">
+            <img
+              src="/brand-full-logo.png"
+              alt="Ramesh and Ramesh Law Associates"
+              className="max-w-2xl w-full h-auto"
+            />
+          </div>
+
           <h1 className="font-serif text-4xl md:text-5xl font-bold leading-tight">
             About Ramesh & Ramesh Law Associates
           </h1>
@@ -27,6 +37,7 @@ export default function About() {
             Delivering trusted legal guidance with over 21 years of experience
             serving individuals, families, and businesses across Karnataka.
           </p>
+
         </div>
       </section>
 
@@ -67,6 +78,7 @@ export default function About() {
             </h3>
 
             <div className="space-y-4 text-muted-foreground">
+
               <div className="flex items-center gap-3">
                 <Scale className="text-accent" size={20} />
                 <span>21+ Years of Legal Experience</span>
@@ -91,6 +103,7 @@ export default function About() {
                 <ShieldCheck className="text-accent" size={20} />
                 <span>Justice-Driven, Ethical Representation</span>
               </div>
+
             </div>
           </div>
         </div>
@@ -99,6 +112,7 @@ export default function About() {
       {/* Core Values */}
       <section className="py-16 md:py-24 bg-muted/30">
         <div className="container max-w-6xl mx-auto px-4 text-center">
+
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary mb-12">
             Justice. Integrity. Expertise.
           </h2>
@@ -140,6 +154,7 @@ export default function About() {
                 informed strategy across diverse legal domains.
               </p>
             </div>
+
           </div>
         </div>
       </section>
@@ -147,6 +162,7 @@ export default function About() {
       {/* Practice Focus */}
       <section className="py-16 md:py-24">
         <div className="container max-w-6xl mx-auto px-4">
+
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary text-center mb-12">
             Our Practice Focus
           </h2>
@@ -163,18 +179,32 @@ export default function About() {
             ].map((item, index) => (
               <div
                 key={index}
-                className="bg-white border border-border rounded-lg p-6 shadow-sm text-center"
+                className="bg-white border border-border rounded-lg p-6 shadow-sm text-center hover:shadow-md transition"
               >
-                <h3 className="font-bold text-primary text-lg">{item}</h3>
+                <h3 className="font-bold text-primary text-lg">
+                  {item}
+                </h3>
               </div>
             ))}
+
           </div>
+
+          <div className="text-center mt-10">
+            <a
+              href="/practice-areas"
+              className="inline-block bg-primary text-primary-foreground px-8 py-4 rounded-md font-bold hover:opacity-90 transition"
+            >
+              Explore All Practice Areas
+            </a>
+          </div>
+
         </div>
       </section>
 
       {/* CTA Section */}
       <section className="py-16 bg-primary text-primary-foreground">
         <div className="container max-w-4xl mx-auto px-4 text-center">
+
           <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">
             Need Trusted Legal Guidance?
           </h2>
@@ -185,12 +215,24 @@ export default function About() {
             Karnataka.
           </p>
 
-          <a
-            href="/contact"
-            className="inline-block bg-accent text-accent-foreground px-8 py-4 rounded-md font-bold hover:opacity-90 transition"
-          >
-            Contact Us Today
-          </a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
+            <a
+              href="/consultation"
+              className="bg-accent text-accent-foreground px-8 py-4 rounded-md font-bold hover:opacity-90 transition"
+            >
+              Book Consultation
+            </a>
+
+            <a
+              href="/contact"
+              className="border-2 border-white px-8 py-4 rounded-md font-bold hover:bg-white/10 transition"
+            >
+              Contact Us
+            </a>
+
+          </div>
+
         </div>
       </section>
 
