@@ -218,7 +218,7 @@ export default function Contact() {
                 <input
                   type="hidden"
                   name="_next"
-                  value="http://localhost:8080/thank-you"
+                  value="https://rameshlawassociates.netlify.app/thank-you"
                 />
 
                 <input
