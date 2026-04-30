@@ -30,7 +30,8 @@ export default function About() {
           </div>
 
           <h1 className="font-serif text-4xl md:text-5xl font-bold leading-tight">
-            About Ramesh & Ramesh Law Associates
+                    About 
+            Ramesh & Ramesh Law Associates
           </h1>
 
           <p className="text-lg text-primary-foreground/80 mt-4 max-w-3xl mx-auto leading-relaxed">
