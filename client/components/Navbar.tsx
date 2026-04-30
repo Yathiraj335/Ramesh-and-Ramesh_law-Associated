@@ -2,22 +2,21 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { useLanguage } from "@/contexts/LanguageContext";
 
 const LOGO_URL = "/logo-light.png";
+
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { language, setLanguage, t } = useLanguage();
   const location = useLocation();
 
   const navLinks = [
-    { label: t("nav.home"), href: "/" },
-    { label: t("nav.about"), href: "/about" },
+    { label: "Home", href: "/" },
+    { label: "About", href: "/about" },
     { label: "Practice Areas", href: "/practice-areas" },
     { label: "Legal Services", href: "/legal-services" },
     { label: "FAQ", href: "/faq" },
     { label: "Office", href: "/office-location" },
-    { label: t("nav.contact"), href: "/contact" },
+    { label: "Contact", href: "/contact" },
   ];
 
   return (
@@ -64,44 +63,13 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Desktop Right Section */}
-          <div className="hidden xl:flex items-center gap-5">
-
-            {/* Language Toggle */}
-            <div className="flex items-center gap-2 text-sm border-l border-border pl-4">
-              <button
-                onClick={() => setLanguage("en")}
-                className={cn(
-                  "font-semibold transition",
-                  language === "en"
-                    ? "text-accent"
-                    : "text-muted-foreground hover:text-accent"
-                )}
-              >
-                EN
-              </button>
-
-              <span className="text-muted-foreground">|</span>
-
-              <button
-                onClick={() => setLanguage("kn")}
-                className={cn(
-                  "font-semibold transition",
-                  language === "kn"
-                    ? "text-accent"
-                    : "text-muted-foreground hover:text-accent"
-                )}
-              >
-                ಕನ್ನಡ
-              </button>
-            </div>
-
-            {/* CTA Button */}
+          {/* Desktop CTA */}
+          <div className="hidden xl:flex items-center">
             <Link
               to="/consultation"
               className="bg-accent text-accent-foreground px-6 py-3 rounded font-semibold hover:opacity-90 transition shadow-sm whitespace-nowrap"
             >
-              {t("nav.book-consultation")}
+              Book Consultation
             </Link>
           </div>
 
@@ -115,6 +83,7 @@ export default function Navbar() {
               {mobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
             </button>
           </div>
+
         </div>
 
         {/* Mobile Navigation */}
@@ -138,42 +107,13 @@ export default function Navbar() {
                 </Link>
               ))}
 
-              {/* Mobile Language Toggle */}
-              <div className="flex items-center gap-3 px-4 py-3 border-t border-border mt-2">
-                <button
-                  onClick={() => setLanguage("en")}
-                  className={cn(
-                    "font-semibold transition",
-                    language === "en"
-                      ? "text-accent"
-                      : "text-muted-foreground"
-                  )}
-                >
-                  EN
-                </button>
-
-                <span className="text-muted-foreground">|</span>
-
-                <button
-                  onClick={() => setLanguage("kn")}
-                  className={cn(
-                    "font-semibold transition",
-                    language === "kn"
-                      ? "text-accent"
-                      : "text-muted-foreground"
-                  )}
-                >
-                  ಕನ್ನಡ
-                </button>
-              </div>
-
               {/* Mobile CTA */}
               <Link
                 to="/consultation"
                 className="mx-4 bg-accent text-accent-foreground px-4 py-3 rounded font-semibold text-center hover:opacity-90 transition"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                {t("nav.book-consultation")}
+                Book Consultation
               </Link>
 
             </div>
