@@ -62,6 +62,5 @@ export default function App() {
 
         </TooltipProvider>
       </QueryClientProvider>
-    </LanguageProvider>
   );
 }
