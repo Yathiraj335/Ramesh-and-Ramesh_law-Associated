@@ -6,8 +6,7 @@ import Footer from "@/components/Footer";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
 import { cn } from "@/lib/utils";
 
-const HERO_BG =
-  "/lady-justice.jpg"; // Save image inside public folder
+const HERO_BG = "/lady-justice.jpg"; // Save image inside public folder
 
 const practiceAreas = [
   {
