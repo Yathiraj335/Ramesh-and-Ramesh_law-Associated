@@ -32,7 +32,19 @@ export default function Consultation() {
               Consultation Request Form
             </h2>
 
-            <form className="space-y-6">
+            <form
+              action="https://formsubmit.co/kunaase@gmail.com"
+              method="POST"
+              className="space-y-6"
+            >
+              {/* Hidden Fields */}
+              <input type="hidden" name="_captcha" value="false" />
+              <input
+                type="hidden"
+                name="_subject"
+                value="New Legal Consultation Request - Ramesh & Ramesh Law Associates"
+              />
+              <input type="text" name="_honey" style={{ display: "none" }} />
 
               {/* Full Name */}
               <div>
@@ -42,7 +54,9 @@ export default function Consultation() {
 
                 <input
                   type="text"
+                  name="Full Name"
                   placeholder="Enter your full name"
+                  required
                   className="w-full border border-border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent"
                 />
               </div>
@@ -55,7 +69,9 @@ export default function Consultation() {
 
                 <input
                   type="tel"
+                  name="Phone Number"
                   placeholder="Enter your phone number"
+                  required
                   className="w-full border border-border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent"
                 />
               </div>
@@ -68,19 +84,25 @@ export default function Consultation() {
 
                 <input
                   type="email"
-                  placeholder="Enter your email"
+                  name="Email Address"
+                  placeholder="Enter your email address"
+                  required
                   className="w-full border border-border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent"
                 />
               </div>
 
-              {/* Practice Area */}
+              {/* Legal Requirement */}
               <div>
                 <label className="block text-sm font-medium mb-2">
                   Legal Requirement
                 </label>
 
-                <select className="w-full border border-border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent">
-                  <option>Select Legal Category</option>
+                <select
+                  name="Legal Requirement"
+                  required
+                  className="w-full border border-border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent"
+                >
+                  <option value="">Select Legal Category</option>
                   <option>Civil Cases</option>
                   <option>Criminal Cases</option>
                   <option>Property Cases</option>
@@ -88,6 +110,7 @@ export default function Consultation() {
                   <option>Cyber Law</option>
                   <option>Documentation</option>
                   <option>Legal Opinion</option>
+                  <option>Family Consultation</option>
                   <option>Document Registration</option>
                 </select>
               </div>
@@ -99,8 +122,10 @@ export default function Consultation() {
                 </label>
 
                 <textarea
+                  name="Legal Concern"
                   rows={6}
                   placeholder="Briefly explain your legal concern"
+                  required
                   className="w-full border border-border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent"
                 />
               </div>
@@ -112,12 +137,13 @@ export default function Consultation() {
               >
                 Submit Consultation Request
               </button>
-
             </form>
 
-            <p className="text-sm text-muted-foreground mt-6 text-center">
-              Our office will contact you through your provided details for
-              further consultation.
+            <p className="text-sm text-muted-foreground mt-6 text-center leading-relaxed">
+              By submitting this form, you acknowledge that website submissions
+              do not automatically establish an advocate-client relationship.
+              Our office will review your request and contact you through your
+              provided details.
             </p>
           </div>
         </div>
@@ -137,7 +163,7 @@ export default function Consultation() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+919902877471"
-              className="bg-primary text-primary-foreground px-8 py-4 rounded-md font-bold"
+              className="bg-primary text-primary-foreground px-8 py-4 rounded-md font-bold hover:opacity-90 transition"
             >
               Call Now
             </a>
@@ -146,7 +172,7 @@ export default function Consultation() {
               href="https://wa.me/919902877471"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-accent text-accent-foreground px-8 py-4 rounded-md font-bold"
+              className="bg-accent text-accent-foreground px-8 py-4 rounded-md font-bold hover:opacity-90 transition"
             >
               WhatsApp Consultation
             </a>
