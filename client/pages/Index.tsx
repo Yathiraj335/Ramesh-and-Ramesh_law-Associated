@@ -218,7 +218,8 @@ export default function Index() {
         <div className="container max-w-4xl mx-auto px-4 text-center">
 
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary mb-8">
-            About Ramesh & Ramesh Law Associates
+                    About 
+            Ramesh & Ramesh Law Associates
           </h2>
 
           <p className="text-lg text-muted-foreground leading-relaxed mb-6">
