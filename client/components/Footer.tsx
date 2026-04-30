@@ -19,8 +19,8 @@ export default function Footer() {
               <div className="w-14 h-14">
                 <img
                   src={LOGO_URL}
-                  alt="Ramesh and Ramesh Law Associates"
-                  className="w-full h-full object-contain invert brightness-200"
+                  alt="Ramesh & Ramesh Law Associates"
+                  className="w-full h-full object-contain"
                 />
               </div>
 
