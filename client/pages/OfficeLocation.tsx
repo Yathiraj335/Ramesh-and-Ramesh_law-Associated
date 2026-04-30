@@ -57,7 +57,7 @@ export default function OfficeLocation() {
 
                   {/* Get Directions Button */}
                   <a
-                    href="https://www.google.com/maps/place/Ramesh+%26+Ramesh+Law+Associates/@13.0059731,77.5414572,17z"
+                    href="google.com/maps?q=Ramesh+%26+Ramesh+Law+Associates,+119,+2nd+Stage,+6th+Main+Rd,+near+Geleyarabalaga+Circle,+2nd+Phase,+Mahalakshmipuram+Layout,+Bengaluru,+Karnataka+560086&ftid=0x3bae3d9f1bf12f29:0x695bb6f031d0caec&entry=gps&shh=CAE&lucs=,94297699,100795625,94284487,94231188,94280568,47071704,94218641,94282134,94286869&g_ep=CAISEjI1LjQ5LjkuODM4ODk5MTgzMBgAINeCAypSLDk0Mjk3Njk5LDEwMDc5NTYyNSw5NDI4NDQ4Nyw5NDIzMTE4OCw5NDI4MDU2OCw0NzA3MTcwNCw5NDIxODY0MSw5NDI4MjEzNCw5NDI4Njg2OUICSU4%3D&skid=b4b51a4e-95e6-44c9-8fdf-c5dac9ea5c98&g_st=iw"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block mt-4 bg-accent text-accent-foreground px-6 py-3 rounded-md font-bold hover:opacity-90 transition"
