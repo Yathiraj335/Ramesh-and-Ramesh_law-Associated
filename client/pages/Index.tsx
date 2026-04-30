@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
 import { cn } from "@/lib/utils";
 
-const HERO_BG = "/lady-justice.png"; // Save image inside public folder
+const HERO_BG = "/lady-justice.png";
 
 const practiceAreas = [
   {
@@ -115,37 +115,48 @@ export default function Index() {
   const [expandedFAQ, setExpandedFAQ] = useState<number | null>(0);
 
   return (
-    <div className="w-full">
+    <div className="w-full pb-24 md:pb-0">
       <TopContactBar />
       <Navbar />
 
       {/* Hero Section */}
       <section
-        className="relative text-white py-24 md:py-36 bg-cover bg-center"
+        className="relative min-h-[92vh] flex items-center overflow-hidden"
         style={{
-          backgroundImage: `linear-gradient(rgba(11,31,58,0.75), rgba(11,31,58,0.8)), url(${HERO_BG})`,
+          backgroundImage: `linear-gradient(
+            to right,
+            rgba(4, 22, 52, 0.96) 0%,
+            rgba(4, 22, 52, 0.88) 35%,
+            rgba(4, 22, 52, 0.72) 55%,
+            rgba(4, 22, 52, 0.38) 75%,
+            rgba(4, 22, 52, 0.15) 100%
+          ), url(${HERO_BG})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center right",
+          backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="container max-w-6xl mx-auto px-4 relative z-10">
+        <div className="container max-w-7xl mx-auto px-4 py-20 relative z-10">
           <div className="max-w-3xl">
-            <h1 className="font-serif text-4xl md:text-6xl font-bold leading-tight mb-6">
+
+            <h1 className="font-serif text-5xl md:text-7xl font-bold leading-[1.05] mb-8 text-white">
               21 Years of Trusted Legal Expertise Across Karnataka
             </h1>
 
-            <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed">
+            <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
               Experts in Civil, Criminal, Property, Family, Cyber Law,
-              Documentation, Legal Opinion, Family Consultation, and Document
-              Registration.
+              Documentation, Legal Opinion, Family Consultation, and
+              Document Registration.
             </p>
 
-            <p className="text-xl md:text-2xl font-semibold text-accent mb-10">
+            <p className="text-2xl md:text-3xl font-bold text-accent mb-10">
               Justice. Integrity. Expertise.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <a
                 href="/consultation"
-                className="bg-accent text-accent-foreground px-8 py-4 rounded font-bold hover:opacity-90 transition text-center"
+                className="bg-accent text-accent-foreground px-10 py-5 rounded-md font-bold text-lg hover:opacity-90 transition text-center"
               >
                 Book Consultation
               </a>
@@ -154,11 +165,12 @@ export default function Index() {
                 href="https://wa.me/919902877471"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border-2 border-white px-8 py-4 rounded font-bold hover:bg-white/10 transition text-center"
+                className="border-2 border-white text-white px-10 py-5 rounded-md font-bold text-lg hover:bg-white/10 transition text-center"
               >
                 WhatsApp Now
               </a>
             </div>
+
           </div>
         </div>
       </section>
