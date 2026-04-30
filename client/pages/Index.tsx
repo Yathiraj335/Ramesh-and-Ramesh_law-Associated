@@ -139,8 +139,16 @@ export default function Index() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary via-primary to-primary/95 text-primary-foreground py-20 md:py-32">
-        <div className="container max-w-6xl mx-auto px-4">
+      <section className="relative bg-gradient-to-br from-primary via-primary to-primary/95 text-primary-foreground py-20 md:py-32 overflow-hidden">
+        {/* Legal background pattern */}
+        <div
+          className="absolute inset-0 opacity-10"
+          style={{
+            backgroundImage: `url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><pattern id="legal" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse"><g stroke="white" stroke-width="1" fill="none"><path d="M100,20 L100,180" opacity="0.3"/><circle cx="100" cy="100" r="40" opacity="0.2"/><path d="M60,100 L140,100" opacity="0.2"/><path d="M100,60 L100,140" opacity="0.2"/><path d="M70,70 L130,130" opacity="0.15"/><path d="M130,70 L70,130" opacity="0.15"/></g></pattern></defs><rect width="1200" height="800" fill="none"/><rect width="1200" height="800" fill="url(%23legal)"/></svg>')`,
+            backgroundSize: "200px 200px",
+          }}
+        ></div>
+        <div className="container max-w-6xl mx-auto px-4 relative z-10">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
               <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
@@ -169,11 +177,12 @@ export default function Index() {
               </div>
             </div>
             <div className="hidden md:flex justify-center items-center">
-              <div className="w-full max-w-sm">
+              <div className="w-full max-w-sm relative">
+                <div className="absolute inset-0 bg-white/5 rounded-full blur-3xl"></div>
                 <img
                   src={LOGO_URL}
                   alt="Ramesh and Ramesh Law Associates"
-                  className="w-full h-auto drop-shadow-lg invert"
+                  className="w-full h-auto drop-shadow-2xl relative z-10 brightness-125"
                 />
               </div>
             </div>
@@ -198,7 +207,7 @@ export default function Index() {
             </div>
             <div className="text-center">
               <div className="text-4xl md:text-5xl font-bold text-accent mb-2">
-                Bangalore
+                Karnataka
               </div>
               <div className="text-lg font-semibold text-primary mb-2">
                 Based Practice

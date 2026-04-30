@@ -89,11 +89,11 @@ export default function Footer() {
                 <span>+91 98765 43210</span>
               </a>
               <a
-                href="mailto:info@rameshlaw.com"
+                href="mailto:kunaase@gmail.com"
                 className="flex items-center gap-2 hover:text-accent transition"
               >
                 <Mail size={16} />
-                <span>info@rameshlaw.com</span>
+                <span>kunaase@gmail.com</span>
               </a>
               <a
                 href="https://wa.me/919876543210"

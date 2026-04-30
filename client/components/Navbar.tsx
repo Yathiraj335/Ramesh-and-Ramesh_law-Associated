@@ -2,20 +2,22 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const LOGO_URL =
   "https://cdn.builder.io/api/v1/image/assets%2F57134794e3d74be2b861b196562dad82%2Fddbc1a054e4d4d8599b546f14139e94c?format=webp&width=800&height=1200";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { language, setLanguage, t } = useLanguage();
 
   const navLinks = [
-    { label: "Home", href: "/" },
-    { label: "About Us", href: "#about" },
-    { label: "Practice Areas", href: "#practice-areas" },
-    { label: "Legal Services", href: "#services" },
-    { label: "FAQ", href: "#faq" },
-    { label: "Contact", href: "#contact" },
+    { label: t("nav.home"), href: "/" },
+    { label: t("nav.about"), href: "#about" },
+    { label: t("nav.practice-areas"), href: "#practice-areas" },
+    { label: t("nav.services"), href: "#services" },
+    { label: t("nav.faq"), href: "#faq" },
+    { label: t("nav.contact"), href: "#contact" },
   ];
 
   return (
@@ -57,11 +59,27 @@ export default function Navbar() {
           {/* Right side - Language toggle + Button */}
           <div className="hidden lg:flex items-center gap-4">
             <div className="flex items-center gap-2 text-sm border-l border-border pl-4">
-              <button className="text-foreground font-medium hover:text-accent transition">
+              <button
+                onClick={() => setLanguage("en")}
+                className={cn(
+                  "font-medium transition",
+                  language === "en"
+                    ? "text-accent font-bold"
+                    : "text-muted-foreground hover:text-accent"
+                )}
+              >
                 EN
               </button>
               <span className="text-muted-foreground">|</span>
-              <button className="text-muted-foreground hover:text-accent transition">
+              <button
+                onClick={() => setLanguage("kn")}
+                className={cn(
+                  "font-medium transition",
+                  language === "kn"
+                    ? "text-accent font-bold"
+                    : "text-muted-foreground hover:text-accent"
+                )}
+              >
                 KN
               </button>
             </div>
@@ -69,7 +87,7 @@ export default function Navbar() {
               href="#consultation"
               className="bg-accent text-accent-foreground px-6 py-2 rounded font-medium hover:opacity-90 transition"
             >
-              Book Consultation
+              {t("nav.book-consultation")}
             </a>
           </div>
 
@@ -99,11 +117,27 @@ export default function Navbar() {
                 </a>
               ))}
               <div className="flex items-center gap-2 px-4 py-2 text-sm border-t border-border mt-2">
-                <button className="text-foreground font-medium hover:text-accent transition">
+                <button
+                  onClick={() => setLanguage("en")}
+                  className={cn(
+                    "font-medium transition",
+                    language === "en"
+                      ? "text-accent font-bold"
+                      : "text-muted-foreground hover:text-accent"
+                  )}
+                >
                   EN
                 </button>
                 <span className="text-muted-foreground">|</span>
-                <button className="text-muted-foreground hover:text-accent transition">
+                <button
+                  onClick={() => setLanguage("kn")}
+                  className={cn(
+                    "font-medium transition",
+                    language === "kn"
+                      ? "text-accent font-bold"
+                      : "text-muted-foreground hover:text-accent"
+                  )}
+                >
                   KN
                 </button>
               </div>
@@ -112,7 +146,7 @@ export default function Navbar() {
                 className="mx-4 bg-accent text-accent-foreground px-4 py-2 rounded font-medium text-center hover:opacity-90 transition"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Book Consultation
+                {t("nav.book-consultation")}
               </a>
             </div>
           </div>

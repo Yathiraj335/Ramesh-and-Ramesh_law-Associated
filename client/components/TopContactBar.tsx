@@ -14,11 +14,11 @@ export default function TopContactBar() {
               <span>+91 98765 43210</span>
             </a>
             <a
-              href="mailto:info@rameshlaw.com"
+              href="mailto:kunaase@gmail.com"
               className="flex items-center gap-2 hover:opacity-90 transition"
             >
               <Mail size={14} />
-              <span>info@rameshlaw.com</span>
+              <span>kunaase@gmail.com</span>
             </a>
             <a
               href="https://wa.me/919876543210"
