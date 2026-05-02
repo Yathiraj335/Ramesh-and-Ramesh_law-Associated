@@ -19,12 +19,14 @@ export default function Footer() {
                 ⚖️
               </div>
 
-              <div className="font-serif text-3xl font-bold leading-tight text-white">
-                Ramesh & Ramesh
-              </div>
+              <div className="text-center">
+                <div className="font-serif text-3xl font-bold leading-tight text-white">
+                  Ramesh & Ramesh
+                </div>
 
-              <div className="text-sm text-accent font-semibold uppercase tracking-[0.35em] mt-2">
-                Law Associates
+                <div className="text-sm text-accent font-semibold uppercase tracking-[0.35em] mt-2 text-center">
+                  Law Associates
+                </div>
               </div>
 
             </Link>
