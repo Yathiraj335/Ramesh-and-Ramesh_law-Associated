@@ -34,15 +34,15 @@ export default function Navbar() {
               />
             </div>
 
-            <div className="hidden sm:block leading-tight">
+            <div className="hidden sm:flex flex-col items-center leading-tight text-center">
               <div className="font-serif text-lg md:text-2xl font-bold text-primary">
                 Ramesh & Ramesh
               </div>
 
-              <div className="text-xs md:text-sm text-accent font-semibold tracking-wide uppercase">
-                {"  "}Law Associates
+              <div className="text-xs md:text-sm text-accent font-semibold tracking-[0.3em] uppercase mt-1">
+                Law Associates
               </div>
-            </div>
+          </div>
           </Link>
 
           {/* Desktop Navigation */}
