@@ -45,12 +45,21 @@ export default function TopContactBar() {
 
           </div>
 
-          {/* Right Section */}
-          <div className="flex items-center gap-2 text-center lg:text-right">
-            <MapPin size={14} className="flex-shrink-0" />
-            <span>
-              Mahalakshmi Puram, Bangalore Office | Serving Clients Across Karnataka
-            </span>
+          {/* Right Section (FIXED + CLICKABLE MAP) */}
+          <div className="flex items-start gap-2 text-left max-w-sm">
+
+            <MapPin size={14} className="mt-[2px] flex-shrink-0" />
+
+            <a
+              href="https://google.com/maps?q=13.0059731,77.5414572"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="leading-snug hover:text-accent transition"
+            >
+              Mahalakshmi Puram, Bangalore Office <br />
+              Serving Clients Across Karnataka
+            </a>
+
           </div>
 
         </div>
