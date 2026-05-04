@@ -150,7 +150,7 @@ export default function Contact() {
                 <input
                   type="hidden"
                   name="redirect"
-                  value="https://rameshlawassociates.netlify.app/thank-you"
+                  value="https://rameshlawassociates.netlify.app/thankyou"
                 />
 
                 {/* NAME */}
