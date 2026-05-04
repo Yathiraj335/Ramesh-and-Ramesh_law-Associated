@@ -150,7 +150,7 @@ export default function Index() {
             </h1>
 
             <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
-              Experts in Civil, Criminal, Property, Family, Cyber Law,
+              Experts in Civil, Criminal, Property, Family cases, Cyber Law,
               Documentation, Legal Opinion, Family Consultation, and
               Document Registration.
             </p>
