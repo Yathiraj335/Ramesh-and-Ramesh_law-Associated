@@ -23,54 +23,49 @@ export default function Consultation() {
         </div>
       </section>
 
-      {/* Consultation Form */}
+      {/* Form */}
       <section className="py-16 md:py-24 bg-background">
         <div className="container max-w-4xl mx-auto px-4">
-          <div className="bg-white border border-border rounded-xl shadow-sm p-8 md:p-10">
+          <div className="bg-white border rounded-xl shadow-sm p-8 md:p-10">
 
             <h2 className="font-serif text-3xl font-bold text-primary mb-8 text-center">
               Consultation Request Form
             </h2>
 
             <form
-              action="https://formsubmit.co/kunaase@gmail.com"
+              action="https://api.web3forms.com/submit"
               method="POST"
               className="space-y-6"
             >
-              {/* Hidden Fields */}
-              <input type="hidden" name="_captcha" value="false" />
-
+              {/* REQUIRED */}
               <input
                 type="hidden"
-                name="_subject"
-                value="New Legal Consultation Request - Ramesh & Ramesh Law Associates"
+                name="access_key"
+                value="8d172e9f-9e6b-456c-a6d3-90d18bc1ac39"
               />
 
               <input
                 type="hidden"
-                name="_next"
+                name="subject"
+                value="New Legal Consultation Request"
+              />
+
+              <input
+                type="hidden"
+                name="redirect"
                 value="https://rameshlawassociates.netlify.app/thank-you"
               />
 
-              {/* Honeypot Anti-Spam */}
-              <input
-                type="text"
-                name="_honey"
-                style={{ display: "none" }}
-              />
-
-              {/* Full Name */}
+              {/* Name */}
               <div>
                 <label className="block text-sm font-medium mb-2">
                   Full Name
                 </label>
-
                 <input
                   type="text"
-                  name="Full Name"
-                  placeholder="Enter your full name"
+                  name="name"
                   required
-                  className="w-full border border-border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent"
+                  className="w-full border rounded-md px-4 py-3"
                 />
               </div>
 
@@ -79,13 +74,11 @@ export default function Consultation() {
                 <label className="block text-sm font-medium mb-2">
                   Phone Number
                 </label>
-
                 <input
                   type="tel"
-                  name="Phone Number"
-                  placeholder="Enter your phone number"
+                  name="phone"
                   required
-                  className="w-full border border-border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent"
+                  className="w-full border rounded-md px-4 py-3"
                 />
               </div>
 
@@ -94,26 +87,23 @@ export default function Consultation() {
                 <label className="block text-sm font-medium mb-2">
                   Email Address
                 </label>
-
                 <input
                   type="email"
-                  name="Email Address"
-                  placeholder="Enter your email address"
+                  name="email"
                   required
-                  className="w-full border border-border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent"
+                  className="w-full border rounded-md px-4 py-3"
                 />
               </div>
 
-              {/* Legal Requirement */}
+              {/* Category */}
               <div>
                 <label className="block text-sm font-medium mb-2">
-                  Legal Requirement
+                  Legal Category
                 </label>
-
                 <select
-                  name="Legal Requirement"
+                  name="category"
                   required
-                  className="w-full border border-border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent"
+                  className="w-full border rounded-md px-4 py-3"
                 >
                   <option value="">Select Legal Category</option>
                   <option>Civil Cases</option>
@@ -129,58 +119,46 @@ export default function Consultation() {
                 </select>
               </div>
 
-              {/* Legal Concern */}
+              {/* Message */}
               <div>
                 <label className="block text-sm font-medium mb-2">
                   Describe Your Legal Concern
                 </label>
-
                 <textarea
-                  name="Legal Concern"
+                  name="message"
                   rows={6}
-                  placeholder="Briefly explain your legal concern"
                   required
-                  className="w-full border border-border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent"
+                  className="w-full border rounded-md px-4 py-3"
                 />
               </div>
 
-              {/* Submit */}
               <button
                 type="submit"
-                className="w-full bg-accent text-accent-foreground py-4 rounded-md font-bold hover:opacity-90 transition"
+                className="w-full bg-accent text-white py-4 rounded-md font-bold"
               >
                 Submit Consultation Request
               </button>
             </form>
 
-            {/* Disclaimer */}
-            <p className="text-sm text-muted-foreground mt-6 text-center leading-relaxed">
-              By submitting this form, you acknowledge that website submissions
-              do not automatically establish an advocate-client relationship.
-              Our office will review your request and contact you through your
-              provided details.
+            <p className="text-sm text-muted-foreground mt-6 text-center">
+              Our office will review your request and contact you shortly.
             </p>
+
           </div>
         </div>
       </section>
 
-      {/* Alternative Contact */}
-      <section className="py-16 bg-muted/30">
-        <div className="container max-w-4xl mx-auto px-4 text-center">
-
+      {/* Direct CTA */}
+      <section className="py-16 bg-muted/30 text-center">
+        <div className="container max-w-4xl mx-auto px-4">
           <h2 className="font-serif text-3xl font-bold text-primary mb-4">
             Prefer Direct Contact?
           </h2>
 
-          <p className="text-muted-foreground text-lg mb-8">
-            Reach us directly through phone or WhatsApp for faster consultation.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-6">
             <a
               href="tel:+919902877471"
-              className="bg-primary text-primary-foreground px-8 py-4 rounded-md font-bold hover:opacity-90 transition"
+              className="bg-primary text-white px-8 py-4 rounded-md font-bold"
             >
               Call Now
             </a>
@@ -189,11 +167,10 @@ export default function Consultation() {
               href="https://wa.me/919902877471"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-accent text-accent-foreground px-8 py-4 rounded-md font-bold hover:opacity-90 transition"
+              className="bg-accent text-white px-8 py-4 rounded-md font-bold"
             >
               WhatsApp Consultation
             </a>
-
           </div>
         </div>
       </section>
