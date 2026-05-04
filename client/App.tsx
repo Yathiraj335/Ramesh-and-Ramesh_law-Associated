@@ -39,7 +39,7 @@ export default function App() {
 
             {/* Conversion */}
             <Route path="/consultation" element={<Consultation />} />
-            <Route path="/thank-you" element={<ThankYou />} />
+            <Route path="/thankyou" element={<ThankYou />} />
 
             {/* Practice & Services */}
             <Route path="/practice-areas" element={<PracticeAreas />} />
