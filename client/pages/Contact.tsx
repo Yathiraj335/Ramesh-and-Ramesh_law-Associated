@@ -150,7 +150,7 @@ export default function Contact() {
                 <input
                   type="hidden"
                   name="redirect"
-                  value="/thankyou"
+                  value="https://rameshlawassociates.com/thankyou"
                 />
 
                 {/* NAME */}
