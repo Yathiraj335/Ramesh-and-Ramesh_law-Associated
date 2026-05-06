@@ -53,7 +53,7 @@ export default function Consultation() {
               <input
                 type="hidden"
                 name="redirect"
-                value="https://rameshlawassociates.netlify.app/thankyou"
+                value="https://rameshlawassociates.com/thankyou"
               />
 
               {/* Name */}
