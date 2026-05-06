@@ -53,7 +53,7 @@ export default function Consultation() {
               <input
                 type="hidden"
                 name="redirect"
-                value="/thankyou"
+                value="https://rameshlawassociates.com/thankyou"
               />
 
               {/* Name */}
