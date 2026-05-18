@@ -54,6 +54,11 @@ const practiceAreas = [
   description:
     "Professional legal guidance for divorce proceedings, mutual consent divorce, contested divorce, child custody, alimony, domestic disputes, and matrimonial legal resolution.",
   },
+  {
+  title: "DRT Cases",
+  description:
+    "Legal representation for Debt Recovery Tribunal matters including loan recovery disputes, SARFAESI proceedings, banking litigation, and financial recovery cases.",
+  },
 ];
 
 export default function PracticeAreas() {
