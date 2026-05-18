@@ -53,8 +53,6 @@ export default function Navbar() {
                 <a
                   key={link.href}
                   href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="text-sm font-semibold transition whitespace-nowrap text-foreground hover:text-accent"
                 >
                   {link.label}
@@ -109,8 +107,6 @@ export default function Navbar() {
                   <a
                     key={link.href}
                     href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
                     className="px-4 py-3 text-sm font-semibold rounded transition text-foreground hover:bg-muted"
                     onClick={() => setMobileMenuOpen(false)}
                   >
