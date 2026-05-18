@@ -56,6 +56,13 @@ export default function Footer() {
                   Home
                 </Link>
               </li>
+              
+              <a
+                href="https://blog.rameshlawassociates.com"
+                className="hover:text-accent transition"
+              >
+                Blog
+              </a>
 
               <li>
                 <Link to="/about" className="hover:text-accent transition">
