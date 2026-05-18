@@ -17,6 +17,7 @@ export default function Navbar() {
     { label: "FAQ", href: "/faq" },
     { label: "Office", href: "/office-location" },
     { label: "Contact", href: "/contact" },
+    { label: "Blog", href: "https://blog.rameshlawassociates.com" },
   ];
 
   return (
@@ -42,25 +43,37 @@ export default function Navbar() {
               <div className="text-xs md:text-sm text-accent font-semibold tracking-[0.3em] uppercase mt-1">
                 Law Associates
               </div>
-          </div>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden xl:flex items-center gap-6">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                to={link.href}
-                className={cn(
-                  "text-sm font-semibold transition whitespace-nowrap",
-                  location.pathname === link.href
-                    ? "text-accent"
-                    : "text-foreground hover:text-accent"
-                )}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) =>
+              link.href.startsWith("http") ? (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-semibold transition whitespace-nowrap text-foreground hover:text-accent"
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <Link
+                  key={link.href}
+                  to={link.href}
+                  className={cn(
+                    "text-sm font-semibold transition whitespace-nowrap",
+                    location.pathname === link.href
+                      ? "text-accent"
+                      : "text-foreground hover:text-accent"
+                  )}
+                >
+                  {link.label}
+                </Link>
+              )
+            )}
           </div>
 
           {/* Desktop CTA */}
@@ -91,21 +104,34 @@ export default function Navbar() {
           <div className="xl:hidden border-t border-border pb-4 bg-white">
             <div className="flex flex-col gap-2 pt-3">
 
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  to={link.href}
-                  className={cn(
-                    "px-4 py-3 text-sm font-semibold rounded transition",
-                    location.pathname === link.href
-                      ? "text-accent bg-muted"
-                      : "text-foreground hover:bg-muted"
-                  )}
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {link.label}
-                </Link>
-              ))}
+              {navLinks.map((link) =>
+                link.href.startsWith("http") ? (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-3 text-sm font-semibold rounded transition text-foreground hover:bg-muted"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link
+                    key={link.href}
+                    to={link.href}
+                    className={cn(
+                      "px-4 py-3 text-sm font-semibold rounded transition",
+                      location.pathname === link.href
+                        ? "text-accent bg-muted"
+                        : "text-foreground hover:bg-muted"
+                    )}
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                )
+              )}
 
               {/* Mobile CTA */}
               <Link
