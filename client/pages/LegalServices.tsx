@@ -44,6 +44,16 @@ const legalServices = [
     description:
       "Legal support in cybercrime, fraud, online disputes, and digital legal concerns.",
   },
+  {
+  title: "Divorce Cases",
+  description:
+    "Expert legal assistance for mutual consent divorce, contested divorce, child custody, maintenance, alimony, and other family court matters.",
+  },
+  {
+  title: "DRT Cases",
+  description:
+    "Legal representation for Debt Recovery Tribunal matters including loan recovery disputes, SARFAESI proceedings, banking litigation, and financial recovery cases.",
+  },
 ];
 
 export default function LegalServices() {
