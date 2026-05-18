@@ -69,6 +69,12 @@ const practiceAreas = [
   description:
     "Professional legal support for divorce proceedings, child custody, alimony, mutual consent, contested divorce, and matrimonial dispute resolution.",
   },
+  {
+  icon: "🏛️",
+  title: "DRT Cases",
+  description:
+    "Representation in Debt Recovery Tribunal matters, SARFAESI proceedings, banking disputes, and financial recovery cases.",
+  },
 ];
 
 const faqItems = [
@@ -203,7 +209,7 @@ export default function Index() {
             </div>
 
             <div>
-              <div className="text-5xl font-bold text-accent">10</div>
+              <div className="text-5xl font-bold text-accent">11</div>
               <div className="font-semibold text-primary mt-2">
                 Practice Areas
               </div>
