@@ -50,9 +50,9 @@ const legalServices = [
     "Expert legal assistance for mutual consent divorce, contested divorce, child custody, maintenance, alimony, and other family court matters.",
   },
   {
-  title: "DRT Cases",
+  title: "DRT & Banking Litigation",
   description:
-    "Legal representation for Debt Recovery Tribunal matters including loan recovery disputes, SARFAESI proceedings, banking litigation, and financial recovery cases.",
+    "Comprehensive legal assistance for Debt Recovery Tribunal proceedings, SARFAESI actions, bank recovery matters, and financial dispute resolution.",
   },
 ];
 
