@@ -132,6 +132,7 @@ export default function Footer() {
               <li>Legal Opinion</li>
               <li>Family Consultation</li>
               <li>Document Registration</li>
+              <li>DRT Cases</li>
             </ul>
           </div>
 
